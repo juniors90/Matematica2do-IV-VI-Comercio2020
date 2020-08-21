@@ -1,0 +1,298 @@
+\documentclass[12pt]{examdesign}
+\usepackage[spanish]{babel}
+\OneKey
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{pifont}
+%-----------------------------------------------------------------------------------------------
+%\usepackage{gfsartemisia-euler}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amscd}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage[all]{xy}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{verbatim}
+\usepackage[colorlinks=true,
+breaklinks=true,
+linkcolor=blue,
+urlcolor=red,
+bookmarksopen=true]{hyperref}
+\usepackage[pdftex,dvipsnames]{xcolor}
+\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+\definecolor{caribbeangreen}{rgb}{0.0, 0.8, 0.6}
+\definecolor{tealgreen}{rgb}{0.0, 0.51, 0.5}
+\definecolor{upforestgreen}{rgb}{0.0, 0.27, 0.13}
+\definecolor{napiergreen}{rgb}{0.16, 0.5, 0.0}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{calpolypomonagreen}{rgb}{0.12, 0.3, 0.17}
+\definecolor{azure(colorwheel)}{rgb}{0.0, 0.5, 1.0}
+\definecolor{dukeblue}{rgb}{0.0, 0.0, 0.61}
+\definecolor{bole}{rgb}{0.47, 0.27, 0.23}
+\definecolor{gris}{gray}{0.975}
+%----------------------------------------------------------------------------------------------
+% Si desea utilizar \@@line para definir su propio encabezado de examen o palabras del encabezado, 
+% asegúrese de usar \makeatletter y \makeatother en los lugares apropiados, de lo contrario 
+% podría obtener errores.
+%-----------------------------------------------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{thm}[theorem]{Teorema}
+\newtheorem{cor}[theorem]{Corolario}
+\newtheorem{lem}[theorem]{Lema}
+\newtheorem{pro}[theorem]{Proposición}
+\newtheorem{axs}[theorem]{Axiomas}
+\newtheorem{axi}[theorem]{Axioma}
+\theoremstyle{definition}
+\newtheorem{exas}[theorem]{Ejemplos}
+\newtheorem{exa}[theorem]{Ejemplo}
+\newtheorem{defi}[theorem]{Definición}
+\theoremstyle{remark}
+\newtheorem{rmk}[theorem]{Observación}
+\newtheorem{step}{Step}
+\newtheorem{xca}[theorem]{Ejercicio}
+\newtheorem{prob}[theorem]{Pregunta}
+\newtheorem{rmks}[theorem]{Observaciones}
+\newtheorem*{proofmt}{Prueba del Teorema Principal}
+\usepackage[centerlast,small,sc]{caption}
+\setlength{\captionmargin}{20pt}
+\newcommand{\axref}[1]{Axioma~\ref{#1}}
+\newcommand{\defref}[1]{\textbf{Definición}~\ref{#1}}
+\newcommand{\coref}[1]{\textbf{Corolario}~\ref{#1}}
+\newcommand{\thref}[1]{\textbf{Teorema}~\ref{#1}}
+\newcommand{\lref}[1]{\textbf{Lema}~\ref{#1}}
+\newcommand{\exaref}[1]{Ejemplo~\ref{#1}}
+\newcommand{\xcaref}[1]{Ejercicio~\ref{#1}}
+\newcommand{\rmkref}[1]{Observación~\ref{#1}}
+\newcommand{\pref}[1]{\textbf{Proposición}~\ref{#1}}
+\newcommand{\fref}[1]{Figura~\ref{#1}}
+\newcommand{\tref}[1]{Tabla~\ref{#1}}
+\newcommand{\cref}[1]{\textbf{Capítulo}~\ref{#1}}
+\newcommand{\sref}[1]{\textbf{Sección}~\ref{#1}}
+\newcommand{\aref}[1]{Apéndice~\ref{#1}}
+\newcommand{\eref}[1]{Ecuación~\eqref{#1}}
+\newcommand{\dref}[1]{Diagrama~\eqref{#1}}
+\usepackage{makeidx}
+\usepackage{tikz,tkz-tab}%
+\usetikzlibrary{matrix,arrows,positioning,shadows,shadings,backgrounds,
+	calc, shapes, tikzmark}
+\usepackage{tcolorbox, empheq}%
+\tcbuselibrary{skins,breakable,listings,theorems}
+
+\tcbset{opteqC/.style={skin=beamer,colback=red!1!white}}
+\newcommand{\celda}[2]{
+	\begin{minipage}{#1mm}
+		\centering
+		\vspace{2mm}
+		#2
+		\vspace{2mm}
+	\end{minipage}
+}
+\makeatletter
+\begin{examtop}
+	\@@line{\parbox{3in}{\classdata \\[0.5cm]
+			\textcolor{upforestgreen}{\textbf{\underline{T.P.N$^\circ$}}~\fbox{\textsc{8}}} \examtype}
+		%                  ^^^^^^
+		\hfill
+		\parbox{3in}{\normalsize \namedata}}
+	\bigskip
+\end{examtop}
+
+\def\namedata{\textcolor{upforestgreen}{\textbf{Estudiante}}:\hrulefill \\[\namedata@vspace]
+	\textcolor{upforestgreen}{\textbf{Curso y División}}: 2do año, IV-VI \\[\namedata@vspace]
+	\textcolor{upforestgreen}{\textbf{Profesor}}: Ferreira, Juan David \\[\namedata@vspace]
+	\textcolor{upforestgreen}{\textbf{Fecha de Entrega}}:\hrulefill}
+% manual page 11        
+\begin{keytop}%
+	\@@line{\hfill \Huge\texttt{\textcolor{upforestgreen}{Respuestas 
+				Trabajo Práctico N$^\circ$~\fbox{\textsc{8}}}} \hfill}
+	\bigskip
+\end{keytop}%
+\makeatother
+\examname{\textcolor{upforestgreen}{\underline{\textbf{Potenciación-Radicación.}}}}
+
+\SectionPrefix{\textcolor{upforestgreen}{\textbf{Sección \arabic{sectionindex}}.} \space}
+\Fullpages
+\ContinuousNumbering
+\DefineAnswerWrapper{}{}
+\NumberOfVersions{1}
+\class{{\textcolor{upforestgreen}{\large\textbf{E.P.E.S. Nro 51 ``J. G. A.''}}\\[0.5cm]
+		\textcolor{upforestgreen}{{\large \textbf{Matemática}}}}}
+\usepackage{scalerel,amssymb}
+\def\mcirc{\mathbin{\scalerel*{\circ}{j}}}
+\def\msquare{\mathord{\scalerel*{\Box}{gX}}}
+
+\begin{document}
+	%-------------------------------             SHORT ANSWER        ------------------------%
+	\begin{fillin}[title={Leemos el material de consulta y realizamos las actividades propuestas}, rearrange=no]
+		
+		\begin{question}
+			Completa los resultados de las siguientes radicaciones y mensionar las reglas o propiedades utilizadas:
+			\begin{enumerate}
+				\item La radicación $\sqrt[]{3^2\cdot 2^{4}}=$\blank{$-32$} y las propiedades que utilicé para resolverlas son:
+				
+				\hrulefill
+				\item La radicación $\sqrt[]{9^2: 4^{2}}=$\blank{$-32$} y las propiedades que utilicé para resolverlas son:
+				
+				\hrulefill
+				\item La radicación $\sqrt[3]{27\cdot 8}=$\blank{$-32$} y las propiedades que utilicé para resolverlas son:
+				
+				\hrulefill
+				\item La radicación $\sqrt[3]{343:125}=$\blank{$-32$} y las propiedades que utilicé para resolverlas son:
+				
+				\hrulefill
+				\item La radicación $\sqrt[]{\sqrt[]{10000}}=$\blank{$-32$} y las propiedades que utilicé para resolverlas son:
+				
+				\hrulefill
+				\item La radicación $\sqrt[]{2\cdot\sqrt[3]{8}}=$\blank{$-32$} y las propiedades que utilicé para resolverlas son:
+				
+				\hrulefill
+			\end{enumerate}
+		\end{question}
+	    \begin{question}
+	    calcular la potencia aplicando propiedades según corresponda y nombrarlas en cada caso. (Recordar que cualquier número distinto de cero elevado a la cero es $1$ y que $1$ elevado a cualquier exponente es $1$. )
+	    	\begin{enumerate}
+	    		\item $(-2)^0=$ \blank{ $(-4)^{2}$}.
+	    		\item $-2^2=$ \blank{ $(-2)^{5}$}.
+	    		\item $\left[(-3)^5\right]^{0}=$ \blank{ $(-2)^{3}$}.
+	    		\item $(-3)^{4}\cdot(-3)^{2}=$ \blank{ $9^{0}$}.
+	    		\item $(-7)^{0}\cdot(-7)^{3}=$ \blank{ $(-4)^{2}$}.
+	    		\item $(-4)^{10}\cdot(-4)^{4}:(-4)^{12}=$ \blank{ $(-4)^{2}$} .
+	    		\item $(-3)^{2}\cdot(-4)^{2}=$ \blank{ $(-4)^{2}$}.
+	    		\item $\left[(-1)^{7}\right]^0$ \blank{ $(-2)^4=$ }.
+	    		\item $(-2)^4:(-4)^{2}=$ \blank{ $(-2)^4=$ }.
+	    	\end{enumerate}
+	    \end{question}
+    \end{fillin}
+	%--------------------------------------------------------------------------------%
+	\begin{endmatter}
+		\vspace{.2cm}
+		\centerline{\large \textcolor{upforestgreen}{\textbf{Potenciación y Radicación en El Conjunto de los Números Enteros ${\mathbb Z}$}}}
+		\vspace{.2cm}
+		
+	    \textbf{Multiplicación de potencias de igual base} 
+	   
+	   Observa el siguiente ejemplo:
+	   
+	   $$2^{3}\cdot 2^{3} \cdot 2^{3} \cdot 2^{3} = 2^{3+3+3+3} = 2^{12}$$
+	   
+	   Observa que el resultado de multiplicar dos o más potencias de igual base es otra potencia con la misma base, y en donde el exponente es la suma de los exponentes iniciales.
+	   
+	   \vspace{.2cm}
+	   
+	   \textbf{Cociente de potencias de igual base}
+	   
+	   Veamos cómo se haría un cociente de potencias de igual base:
+	   
+	   $5^{8} : 5^{4} = 5^{8-4} = 5^{4} = 625$
+	   
+	   Observa que el resultado de dividir dos potencias de igual base es otra potencia con la misma base, y en donde el exponente es la resta de los exponentes iniciales.
+	   
+	   \vspace{.2cm}
+	   
+	   \textbf{Potencia de una potencia}
+	   
+	   El resultado de calcular la potencia de una potencia es una potencia con la misma base, y cuyo exponente es la el producto de los dos exponentes. Por ejemplo:
+	   
+	   $$(2^{3})^{5} = 2^{3\cdot 5} = 2^{15}$$
+	   
+	   \vspace{.2cm}
+	   
+	   \textbf{Distributiva respecto a la multiplicación y a la división}
+	   
+	    Para hacer el producto de dos números elevado a una misma potencia tienes dos caminos posibles, cuyo resultado es el mismo:
+	   
+	    \begin{itemize}
+	    	\item Podes primero multiplicar los dos números, y después calcular el resultado de la potencia:
+	    	
+	    	$$(4\cdot 5)^{4} = 20^{4}= 160000$$
+	    	
+	    	O bien podes elevar cada número por separado al exponente y después multiplicar los resultados.
+	    	
+	    	$$(4\cdot 5)^{4} = 4^{4}\cdot 5^{4} = 256\cdot 625 = 160000$$
+	    	
+	    	\item De forma análoga podes proceder si se trata del cociente de dos números elevado a la misma potencia.
+	    	
+	    	\begin{align*}
+	    	(3 : 2)^{4} &= 1,5^{4} = 1,5\cdot 1,5\cdot 1,5\cdot 1,5= 5, 0625 \\
+	    	(3 : 2)^{4} &= 3^{4} : 2^{4} = 81 : 16 = 5,0625
+	    	\end{align*}
+	    	
+	    \end{itemize}
+	    Observa que de las dos formas obtienes el mismo resultado. Ahora bien, no siempre será igual de sencillo de las dos formas. Así que piensa de antemano qué método va a ser más conveniente para realizar el cálculo.
+	   
+	    NO distributiva respecto a la suma y a la resta.
+	   
+	    NO se puede distribuir cuando dentro del paréntesis es suma o resta:
+	   
+	    Por ejemplo:
+	   
+	    \begin{exa} Mostramos que lo que ocurre en la suma:
+	   	    \begin{align*}
+	   	        (6 + 3)^{2} &\not= 6^{2} + 3^{2}&         \mbox{porque}&&              (6 + 3)^{2} &= 9^{2} = 81 \\
+	   	                    &                   &                      &&            6^{2} + 3^{2} &= 36 + 9 = 45\\
+	   	                    &                   &           \mbox{pero}&&                       81 &\not= 45
+	   	    \end{align*}
+ 	    \end{exa}
+     	   
+	    \begin{exa}Mostramos que lo que ocurre en la resta:
+	   	    \begin{align*}
+        	   	(10 - 6)^{2} &\not= 10^{2} - 6^{2}&       \mbox{porque}&&             (10 - 6)2 &= 42 = 16\\
+        	   	             &                    &                    &&             102 - 62  &= 100 - 36 = 64\\
+        	   	             &                    &         \mbox{pero}&&                   16  &\not= 64
+	   	    \end{align*}
+	    \end{exa}
+	   
+	    Veremos ahora \textcolor{red}{las propiedades de la radicación}:
+	    
+	    \textbf{Es distributiva con respecto a la multiplicación y a la división.}
+	    
+	    Veamos un ejemplo:
+	    
+	    \begin{itemize}
+	    	\item En la división,
+	    	    \begin{align*}
+	    	        \sqrt[]{16:4}&=\sqrt[]{16}:\sqrt[]{4}=4:2=2\\
+	    	        \sqrt[]{16:4}&=\sqrt[]{4}=2
+	    	    \end{align*}
+	    	\item  En la multiplicación,
+	    	    \begin{align*}
+	    	        \sqrt[]{4\cdot 9}&=\sqrt[]{4}\cdot\sqrt[]{9}=2\cdot 3=6\\
+	    	        \sqrt[]{4\cdot 9}&=\sqrt[]{36}=6
+	    	    \end{align*}
+	    \end{itemize}
+	    
+	    
+	    
+	    NO es distributiva con respecto a la suma y a la resta.
+	    
+	    \begin{exa} Mostramos que lo que ocurre en la suma:
+	    	\begin{align*}
+	    	\sqrt[]{4 + 9}&\not= \sqrt[]{4}+\sqrt[]{9}&              \mbox{porque}&&                  \sqrt[]{4 + 9}&=\sqrt[]{13} \\
+	    	              &                           &                           &&           \sqrt[]{4}+\sqrt[]{9}&= 2 + 3 = 5  \\
+	    	              &                           &                \mbox{pero}&&                     \sqrt[]{13}&\not= 5
+	    	\end{align*}
+	    \end{exa}
+	    
+	    \begin{exa}Ahora bien, mostramos que lo que en la resta ocurre si:
+	    	\begin{align*}
+	    	\sqrt[3]{27 - 8}&\not= \sqrt[3]{27}-\sqrt[3]{8}&         \mbox{porque}&&                \sqrt[3]{27 - 8}&=\sqrt[]{19} \\
+	    	                &                              &                      &&        \sqrt[3]{27}-\sqrt[3]{8}&= 3 - 2 = 1  \\
+	    	                &                              &           \mbox{pero}&&                     \sqrt[]{19}&\not= 1
+	    	\end{align*}
+	    \end{exa}
+        \textbf{Si tengo una raíz de raíz se multiplican los índices}: $\sqrt[m]{\sqrt[n]{b}}=\sqrt[m\cdot n]{b}$.
+        \begin{exa} Mostramos que lo que ocurre en la suma:
+        	\begin{align*}
+        	    \sqrt[3]{\sqrt[]{64}}&=\sqrt[3\cdot 2]{64}=\sqrt[6]{64}=2&             \mbox{porque} &&                  2^{6}&=64 \\
+        	           \mbox{o bien} &                                   &                           &&                       &    \\
+        	    \sqrt[3]{\sqrt[]{64}}&=\sqrt[3]{8}=2.                   &                           &&                       &                     
+        	\end{align*}
+        \end{exa}
+	\end{endmatter}
+\end{document}

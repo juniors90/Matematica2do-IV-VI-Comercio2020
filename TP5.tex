@@ -1,0 +1,222 @@
+\documentclass[11pt]{examdesign}
+\usepackage[spanish]{babel}
+\OneKey
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{pifont}
+%-----------------------------------------------------------------------------------------------
+%\usepackage{gfsartemisia-euler}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amscd}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage[all]{xy}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{verbatim}
+\usepackage[colorlinks=true,
+linkcolor=blue,
+urlcolor=red,
+bookmarksopen=true]{hyperref}
+\usepackage[pdftex,dvipsnames]{xcolor}
+\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+\definecolor{caribbeangreen}{rgb}{0.0, 0.8, 0.6}
+\definecolor{tealgreen}{rgb}{0.0, 0.51, 0.5}
+\definecolor{upforestgreen}{rgb}{0.0, 0.27, 0.13}
+\definecolor{napiergreen}{rgb}{0.16, 0.5, 0.0}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{calpolypomonagreen}{rgb}{0.12, 0.3, 0.17}
+\definecolor{azure(colorwheel)}{rgb}{0.0, 0.5, 1.0}
+\definecolor{dukeblue}{rgb}{0.0, 0.0, 0.61}
+\definecolor{bole}{rgb}{0.47, 0.27, 0.23}
+\definecolor{gris}{gray}{0.975}
+%----------------------------------------------------------------------------------------------
+% Si desea utilizar \@@line para definir su propio encabezado de examen o palabras del encabezado, 
+% asegúrese de usar \makeatletter y \makeatother en los lugares apropiados, de lo contrario 
+% podría obtener errores.
+%-----------------------------------------------------------------------------------------------
+\makeatletter
+% manual page 10
+\begin{examtop}
+	\@@line{\parbox{3in}{\classdata \\[0.5cm]
+			\textcolor{upforestgreen}{\textbf{\underline{T.P.N$^\circ$}}~\fbox{\textsc{5}}} \examtype}
+		%                  ^^^^^^
+		\hfill
+		\parbox{3in}{\normalsize \namedata}}
+	\bigskip
+\end{examtop}
+% manual page 10
+\def\namedata{\textcolor{upforestgreen}{\underline{\textbf{Estudiante}}}:\hrulefill \\[\namedata@vspace]
+	          \textcolor{upforestgreen}{\underline{\textbf{Curso y División}}}: 2$^\circ$ Año \\[\namedata@vspace]
+	          \textcolor{upforestgreen}{\underline{\textbf{División}}}: IV-VI
+	          \\[\namedata@vspace]
+	          \textcolor{upforestgreen}{\underline{\textbf{Profesor}}}: Ferreira, Juan David \\[\namedata@vspace]
+	          \textcolor{upforestgreen}{\underline{\textbf{Fecha}}}: 16-06-2020 al 26-06-2020
+          }
+ % manual page 11        
+\begin{keytop}%
+	\@@line{\hfill \Huge\texttt{\textcolor{upforestgreen}{Respuestas 
+		Trabajo Práctico N$^\circ$~\fbox{\textsc{5}}}} \hfill}
+	\bigskip
+\end{keytop}%
+\makeatother
+
+
+\examname{\textcolor{upforestgreen}{\underline{\textbf{Ecuación Exponencial}}}}
+%\SectionPrefix{Sección \arabic{sectionindex}. \space}
+%\SectionPrefix{Sección \Alph{sectionindex}. \space}
+%\SectionPrefix{Punto \Alph{sectionindex}. \space}
+%\SectionPrefix{Punto \arabic{sectionindex}. \space}
+%\SectionPrefix{Ejercicio \Alph{sectionindex}. \space}
+\SectionPrefix{\textcolor{upforestgreen}{\textbf{Ejercicio \arabic{sectionindex}}.} \space}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Este macro toma un argumento, quiere decir que dentro de las llaves vamos a colocar un estilo de
+% letra para nuestro titulo. hay que saber acerca de fuentes y estilos de letras.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\SectionFont{\Large\rmfamily}
+%\SectionFont{\Large\sffamily}
+%\SectionFont{\Large\ttfamily}
+%\SectionFont{\Large\mdseries}
+%\SectionFont{\Large\bfseries}
+%\SectionFont{\Large\upshape}
+%\SectionFont{\Large\slshape}
+%\SectionFont{\Large\itshape}
+%\SectionFont{\Large\scshape}
+
+%%%%%%%%%%%%%%%%%%%%%%%%      Nos da los margenes                        %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%     Funciona igual que el paquete geometry     %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Fullpages
+
+\ContinuousNumbering
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      RESPUESTAS CORTAS     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\ShortKey
+
+\DefineAnswerWrapper{}{}
+%%%%%%%%%%%%%%%%%%     NUMERO DE VERSIONES DEL EXAMEN FILA A, FILA B, FILA C, ETC     %%%%%%%%%%%%%%%
+\NumberOfVersions{1}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Este macro toma un argumento, quiere decir que dentro de las llaves vamos a colocar un estilo de letra para nuestro titulo. hay que saber acerca de fuentes y estilos de letras.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\class{{\textcolor{upforestgreen}{\Large\textbf{E.P.E.S. Nro 51 ``J. G. A.''}}\\[0.5cm]
+		\textcolor{upforestgreen}{{\Large \textbf{Matemática}}}}}
+
+\begin{document}
+	
+	
+    %-------------------------------             SHORT ANSWER        ------------------------%
+    \begin{fillin}[title={Completar el siguiente cuadro siguiendo el ejemplo del primer renglón:}]
+    	\begin{multicols}{2}
+    		% 30% de la página
+    		\begin{tabular}{|c|c|c|c|}
+    			\hline
+    			{\scriptsize Fracción}      &{\scriptsize Expresión}&{\scriptsize Nombre}	 &{\scriptsize Expresión}
+    			\\
+    			&{\scriptsize Decimal}  &            &{\scriptsize Porcentual}
+    			\\\hline
+    			$\frac{3}{4}$ & $0.75$  &{\scriptsize Tres cuartos}&$75\%$
+    			\\\hline
+    			$\frac{1}{4}$ &         &           &             
+    			\\\hline
+    			& $0.5$   &           &
+    			\\\hline
+    			&         &{\scriptsize Un quinto}&
+    			\\\hline
+    			$1$           & $0.8$   &           &
+    			\\\hline
+    			$\frac{3}{5}$ &         &           &
+    			\\\hline
+    			&         &{\scriptsize siete medios}&
+    			\\\hline
+    		\end{tabular}
+    		\columnbreak
+    		\begin{tabular}{|c|c|c|c|}
+    			\hline
+    			{\scriptsize Fracción}      &{\scriptsize Fracción}     &{\scriptsize Fracción}	 &{\scriptsize Fracción}
+    			\\
+    			&{\scriptsize Simplificada} &{\scriptsize Amplificada} &{\scriptsize Ireducible}
+    			\\\hline
+    			$\frac{3}{4}$ & $0.75$  &{\scriptsize Tres cuartos}&$75\%$
+    			\\\hline
+    			$\frac{1}{4}$ &         &           &             
+    			\\\hline
+    			& $0.5$   &           &
+    			\\\hline
+    			&         &{\scriptsize Un quinto}&
+    			\\\hline
+    			$1$           & $0.8$   &           &
+    			\\\hline
+    			$\frac{3}{5}$ & \blank{tres quintos}        &           &
+    			\\\hline
+    			&         &{\scriptsize siete medios}&
+    			\\\hline
+    		\end{tabular}
+    	\end{multicols}
+        \begin{question}
+    	    How much \blank{wood} would a \blank{woodchuck} chuck, if a \blank{woodchuck}
+    	    would \blank{chuck}, wood?
+        \end{question}
+    \end{n{fillin}
+
+    
+    %-----------------------------------------------------------------------------------------------%
+    \begin{endmatter}
+    	\vspace*{1.5in}
+    	\centerline{\Large \textcolor{upforestgreen}{Material de consulta:}}
+    	\bigskip
+    	De la función exponencial podemos armar una tabla de valores (ya conocida). \footnote{Video de consulta \url{https://www.youtube.com/watch?v=Fl1PvjOh9Us}}
+    	\begin{multicols}{2}
+    		% 30% de la página
+    		   
+    			\begin{center}
+    				\begin{tabular}{|l|c|}
+    					\hline
+    					$x$ & $f(x)=2^x$       \\ \hline
+    					$-3$&$2^{-3}=\left(\frac{1}{2}\right)^3=\left(\frac{1}{8}\right)$\\\hline
+    					$-2$&$2^{-2}=\left(\frac{1}{2}\right)^2=\left(\frac{1}{4}\right)$ \\\hline
+    					$-1$& $2^{-1}=\left(\frac{1}{2}\right)^1=\left(\frac{1}{2}\right)$\\\hline
+    					$0$ & $2^0=1$                   \\\hline
+    					$1$          & $2^1=2$           \\\hline
+    					$2$          & $2^2=2\cdot2=4$       \\\hline
+    					$3$          & $2^3=2\cdot2\cdot2=8$     \\\hline
+    					$\vdots$     & $\vdots$          \\\hline
+    					$\textbf{m}$ & $2^m$    \\\hline
+    				    $\textbf{n}$ & $2^n$    \\\hline
+    				    $\textbf{t}$ & $2^t$    \\\hline
+    				\end{tabular}
+    		\end{center}
+    		\columnbreak
+    		\begin{center}
+    			 \begin{tabular}{|l|c|}
+    			 	\hline
+    			 	$x$ & $f(x)=2^x$       \\ \hline
+    			 	$-3$&$2^{-3}=\left(\frac{1}{2}\right)^3=\left(\frac{1}{8}\right)$\\\hline
+    			 	$-2$&$2^{-2}=\left(\frac{1}{2}\right)^2=\left(\frac{1}{4}\right)$ \\\hline
+    			 	$-1$& $2^{-1}=\left(\frac{1}{2}\right)^1=\left(\frac{1}{2}\right)$\\\hline
+    			 	$0$ & $2^0=1$                   \\\hline
+    			 	$1$          & $2^1=2$           \\\hline
+    			 	$2$          & $2^2=2\cdot2=4$       \\\hline
+    			 	$3$          & $2^3=2\cdot2\cdot2=8$     \\\hline
+    			 	$\vdots$     & $\vdots$          \\\hline
+    			 	$\textbf{m}$ & $2^m$    \\\hline
+    			 	$\textbf{n}$ & $2^n$    \\\hline
+    			 	$\textbf{t}$ & $2^t$    \\\hline
+    			 \end{tabular}
+    		 \end{center}
+    	\end{multicols}     
+    	
+    	
+    \end{endmatter}
+    
+\end{document}

@@ -1,0 +1,204 @@
+\documentclass[10pt]{examdesign}
+\usepackage[spanish]{babel}
+\OneKey
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{pifont}
+%-----------------------------------------------------------------------------------------------
+%\usepackage{gfsartemisia-euler}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{amscd}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage[all]{xy}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{verbatim}
+\usepackage[colorlinks=true,
+linkcolor=blue,
+urlcolor=red,
+bookmarksopen=true]{hyperref}
+\usepackage[pdftex,dvipsnames]{xcolor}
+\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+\definecolor{caribbeangreen}{rgb}{0.0, 0.8, 0.6}
+\definecolor{tealgreen}{rgb}{0.0, 0.51, 0.5}
+\definecolor{upforestgreen}{rgb}{0.0, 0.27, 0.13}
+\definecolor{napiergreen}{rgb}{0.16, 0.5, 0.0}
+\definecolor{capri}{rgb}{0.0, 0.75, 1.0}
+\definecolor{calpolypomonagreen}{rgb}{0.12, 0.3, 0.17}
+\definecolor{azure(colorwheel)}{rgb}{0.0, 0.5, 1.0}
+\definecolor{dukeblue}{rgb}{0.0, 0.0, 0.61}
+\definecolor{bole}{rgb}{0.47, 0.27, 0.23}
+\definecolor{gris}{gray}{0.975}
+%-------------------------------------------------------------------------------------------------%
+% Si desea utilizar \@@line para definir su propio encabezado de examen o palabras del encabezado, 
+% asegúrese de usar \makeatletter y \makeatother en los lugares apropiados, de lo contrario 
+% podría obtener errores.
+%-------------------------------------------------------------------------------------------------%
+\makeatletter
+% manual page 10
+\begin{examtop}
+	\@@line{\parbox{3in}{\classdata \\[0.5cm]
+			\textcolor{upforestgreen}{\textbf{\underline{T.P.N$^\circ$}~\fbox{\textsc{7}}~:}} \examtype}
+		%                  ^^^^^^
+		\hfill
+		\parbox{3in}{\normalsize \namedata}}
+	\bigskip
+\end{examtop}
+% manual page 10
+\def\namedata{\textcolor{upforestgreen}{\underline{\textbf{Estudiante}}}:\hrulefill \\[\namedata@vspace]
+	\textcolor{upforestgreen}{\underline{\textbf{Curso y División}}}: 2$^\circ$ Año \\[\namedata@vspace]
+	\textcolor{upforestgreen}{\underline{\textbf{División}}}: IV-VI
+	\\[\namedata@vspace]
+	\textcolor{upforestgreen}{\underline{\textbf{Profesor}}}: Ferreira, Juan David \\[\namedata@vspace]
+	\textcolor{upforestgreen}{\underline{\textbf{Fecha}}}:\hrulefill
+}
+% manual page 11        
+\begin{keytop}%
+	\@@line{\hfill \Huge\texttt{\textcolor{upforestgreen}{Respuestas 
+				Trabajo Práctico N$^\circ$~\fbox{\textsc{6}}}} \hfill}
+	\bigskip
+\end{keytop}%
+\makeatother
+
+
+\examname{\textcolor{upforestgreen}{\underline{\textbf{Actividedes de Integración}}}}
+%\SectionPrefix{Sección \arabic{sectionindex}. \space}
+%\SectionPrefix{Sección \Alph{sectionindex}. \space}
+%\SectionPrefix{Punto \Alph{sectionindex}. \space}
+%\SectionPrefix{Punto \arabic{sectionindex}. \space}
+%\SectionPrefix{Ejercicio \Alph{sectionindex}. \space}
+%\SectionPrefix{\textcolor{upforestgreen}{\textbf{Ejercicio \arabic{sectionindex}}.} \space}
+\SectionPrefix{\textcolor{upforestgreen}{\textbf{Parte \Alph{sectionindex}}.} \space}
+%\SectionPrefix{\textcolor{upforestgreen}{\textbf{Parte \arabic{sectionindex}}.} \space}
+
+%-----------------------------------------------------------------------------------------------%
+% Este macro toma un argumento, quiere decir que dentro de las llaves vamos a colocar un estilo de
+% letra para nuestro titulo. hay que saber acerca de fuentes y estilos de letras.
+%-----------------------------------------------------------------------------------------------%
+
+%\SectionFont{\Large\rmfamily}
+%\SectionFont{\Large\sffamily}
+%\SectionFont{\Large\ttfamily}
+%\SectionFont{\Large\mdseries}
+%\SectionFont{\Large\bfseries}
+%\SectionFont{\Large\upshape}
+%\SectionFont{\Large\slshape}
+%\SectionFont{\Large\itshape}
+%\SectionFont{\Large\scshape}
+
+%--------------------- Nos da los margenes-Funciona igual que el paquete geometry -------------%
+\Fullpages
+
+\ContinuousNumbering
+%-------------------------------      RESPUESTAS CORTAS     -----------------------------------%
+%\ShortKey
+
+\DefineAnswerWrapper{}{}
+%-----------------------------   NUMERO DE VERSIONES DEL EXAMEN   -----------------------------%
+\NumberOfVersions{1}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Este macro toma un argumento, quiere decir que dentro de las llaves vamos a colocar un estilo de letra para nuestro titulo. hay que saber acerca de fuentes y estilos de letras.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\class{{\textcolor{upforestgreen}{\Large\textbf{E.P.E.S. Nro 51 ``J. G. A.''}}\\[0.5cm]
+		\textcolor{upforestgreen}{{\Large \textbf{Matemática}}}}
+	}
+
+\begin{document}
+	
+	
+    %-------------------------------             SHORT ANSWER N°1        ------------------------%
+    \begin{shortanswer}[title={\textbf{Resolver las siguientes situaciones mostrando en tu carpeta el razonamiento:}},
+    	rearrange=no,resetcounter=no]
+    	
+        
+        \begin{question}
+            Marcia consultó el saldo de su cuenta el $15$ de Mayo y tenía $-\$3200 $. Si realizó un depósito de $\$1750$. ¿Qué saldo quedó en su cuenta luego de ese depósito?.
+        	\begin{answer}
+        		\textbf{Repuesta}: este ejercicio así planteado no tiene solución.
+        	\end{answer}
+        \end{question}
+    
+        \begin{question}
+        	El 16 de mayo, Marcia realizó una extracción de $\$1200$. ¿Cuál es el saldo luego de esa extracción?.
+        	\begin{answer}
+        		\textbf{Repuesta}: este ejercicio así planteado no tiene solución.
+        	\end{answer}
+        \end{question} 
+        
+        \begin{question}
+        	Sebastián está en el décimo piso de un edificio, le dicen que tiene que bajar a un depósito que se encuentra en piso $-4$ (cuarto subsuelo). ¿Cuántos pisos debe bajar?.
+        	\begin{answer}
+        		\textbf{Repuesta}: este ejercicio así planteado no tiene solución.
+        	\end{answer}
+        \end{question}
+        
+        \begin{question}
+        	Una sabio murió en el año $23$ antes de Cristo y tenía $78$ años en ese momento. ¿En qué año nació?.
+        	\begin{answer}
+        		\textbf{Repuesta}:.
+        	\end{answer}
+        \end{question}        
+    \end{shortanswer}
+    
+    %------------------------     COMPLETAR ESPACIOS EN BLANCOS N°2     -----------------------%
+    \begin{fillin}[title={\textbf{Calculos de sumas y restas...}}, resetcounter=no, rearrange=no]
+    	\begin{question}
+    		Realizar las siguientes sumas y restas de acuerdo a la definición
+    		\begin{itemize}
+    			\item [a.] $15-(-32)=$\blank{woodchuck}
+    			\item [b.] $-8-(-19)=$\blank{woodchuck}
+    			\item [c.] $50-(-56)=$\blank{woodchuck}
+    			\item [d.] $-5-30=$\blank{woodchuck}
+    			\item [e.] $-15-(-6)=$\blank{woodchuck}
+    			\item [f.] $95-(-100)=$\blank{woodchuck}
+    			\item [g.] $-25-(-35)=$\blank{woodchuck}
+    			\item [h.] $-15-20=$ \blank{woodchuck}
+    		\end{itemize}
+    	\end{question}	        	
+    \end{fillin}
+
+    %-------------------------------             SHORT ANSWER        ------------------------%
+    \begin{shortanswer}[title={\textbf{Repasamos algunos conceptos...}},
+    	rearrange=no,resetcounter=no]
+    	
+    	
+    	\begin{question}
+    		Completar el siguiente cuadro con números enteros:
+    		
+    		\begin{tabular}{|c|c|c|c|c|c|c|}
+    			\hline
+    			\textbf{A}&\textbf{B}&\textbf{Opuesto de A}&\textbf{Valor Absoluto de B}&\textbf{Siguiente de A}& \textbf{Anterior de A}&\textbf{A-B}
+    			\\\hline
+    			  $-13$          & $33$  & $13$  &  $33$ & $-12$ & $-14$ & $-13-33=-46$ 
+    			\\\hline
+    			  $32$           & $-54$ &       &       &       &  &
+    			\\\hline
+    			                 & $21$  &       &       & $-24$ &  &
+    			\\\hline
+    			  $41$           &       &       & $6$   &       &  &
+    			\\\hline
+    			$-90$            & $62$  &       &       &       &  &
+    			\\\hline
+    		\end{tabular}
+    	
+    		\begin{answer}
+    			\textbf{Repuesta}:.
+    		\end{answer}
+    	\end{question}        
+    \end{shortanswer}
+     
+    %------------------------     FILLIN N°4     -----------------------%
+  
+    %-----------------------------------------------------------------------------------------------%
+    
+\end{document}
